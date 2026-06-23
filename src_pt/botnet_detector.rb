@@ -909,9 +909,9 @@ loop do
   when 11
     gerar_relatorio_txt
   when 12
-    mostrar_ficheiro("docs/ajuda.txt")
+    mostrar_ficheiro(File.join(__dir__, "docs/ajuda.txt"))
   when 13
-    mostrar_ficheiro("docs/sobre.txt")
+    mostrar_ficheiro(File.join(__dir__, "docs/sobre.txt"))
   when 0
     puts "\nA terminar o programa..."
     break
