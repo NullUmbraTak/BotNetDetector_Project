@@ -1,0 +1,62 @@
+=========================================
+SOBRE O PROJETO
+=========================================
+
+<-.(`-')            (`-')      <-. (`-')_  (`-')  _(`-')                        
+ __( OO)      .->   ( OO).->      \( OO) ) ( OO).-/( OO).->                     
+'-'---.\ (`-')----. /    '._  ,--./ ,--/ (,------./    '._                      
+| .-. (/ ( OO).-.  '|'--...__)|   \ |  |  |  .---'|'--...__)                    
+| '-' `.)( _) | |  |`--.  .--'|  . '|  |)(|  '--. `--.  .--'                    
+| /`'.  | \|  |)|  |   |  |   |  |\    |  |  .--'    |  |                       
+| '--'  /  '  '-'  '   |  |   |  | \   |  |  `---.   |  |                       
+`------'    `-----'    `--'   `--'  `--'  `------'   `--'                       
+ _(`-')    (`-')  _(`-')      (`-')  _          (`-')                    (`-')  
+( (OO ).-> ( OO).-/( OO).->   ( OO).-/ _        ( OO).->       .->   <-.(OO )  
+ \    .'_ (,------./    '._  (,------. \-,-----./    '._  (`-')----. ,------,) 
+ '`'-..__) |  .---'|'--...__) |  .---'  |  .--./|'--...__)( OO).-.  '|   /`. ' 
+ |  |  ' |(|  '--. `--.  .--'(|  '--.  /_) (`-')`--.  .--'( _) | |  ||  |_.' | 
+ |  |  / : |  .--'    |  |    |  .--'  ||  |OO )   |  |    \|  |)|  ||  .   .' 
+ |  '-'  / |  `---.   |  |    |  `---.(_'  '--'\   |  |     '  '-'  '|  |\  \  
+ `------'  `------'   `--'    `------'   `-----'   `--'      `-----' `--' '--' 
+
+
+BOTNET DETECTOR
+
+[O que é uma botnet?]
+Uma botnet é uma rede de computadores infetados por malware que podem ser controlados remotamente por um atacante. 
+Estas redes são frequentemente utilizadas para ataques distribuídos (DDoS), envio de spam, roubo de informação e outras atividades maliciosas.
+
+[Objetivo da aplicação]
+Analisar ficheiros de logs e identificar indícios de atividade associada a botnets.
+
+[Como funciona (Estado atual)]
+Nesta fase, a ferramenta opera através de um menu interativo e conta com as seguintes capacidades totalmente implementadas:
+
+* Geração de Logs (Simulador de Ameaças):
+  A aplicação inclui um motor capaz de fabricar ficheiros de log realistas para testar sistemas de deteção. 
+  O simulador mistura tráfego de rede normal com anomalias injetadas à escolha do utilizador, tais como:
+  - Comunicações de Comando e Controlo (Beaconing) com variação de tempo (Jitter).
+  - Padrões agressivos de Força Bruta (Brute force).
+  - Consultas DNS suspeitas a domínios DGA (Domain Generation Algorithms).
+  Os resultados são guardados de forma segura e auto-numerada na diretoria local (logs/generated_logs/).
+
+* Motor de Análise Avançada (Threat Intelligence):
+  A ferramenta processa ficheiros de log, realizando auditorias detalhadas através de vários pilares de segurança:
+  - Autenticações Falhadas: Deteção de ataques de Força Bruta (AUTH).
+  - Picos de Atividade: Análise volumétrica horária para detetar flutuações anormais no tráfego.
+  - Deteção de Beaconing: Cálculo de desvios padrões temporais e tolerância a Jitter para descobrir canais automatizados persistentes.
+  - Análise de DNS: Identificação de domínios perigosos e uso do algoritmo de Levenshtein para detetar Typosquatting/Phishing.
+  - Auditoria de IPs Externos: Geolocalização de endereços IP públicos e identificação de ISPs em tempo real.
+
+* Relatórios e Estatísticas:
+  Métricas de distribuição de tráfego legítimo vs malicioso e exportação avançada de relatórios de auditoria em disco.
+  - Organização Inteligente: Criação automática das estruturas de diretórios locais (logs/, logs/generated_logs/ e reports/)
+   e suporte para nomes personalizados com auto-numeração sequencial para prevenir perda de dados.
+  - Anexo de Evidências (IoCs): Além do resumo executivo geral, 
+  o relatório exporta os detalhes técnicos precisos (linhas de log exatas, máquinas e domínios afetados) que comprovam as ameaças detetadas.
+
+Autor do projeto
+Nome: André Filipe (NullUmbraTak)
+Unidade: 1482
+Curso: Técnico Especialista em Cibersegurança
+=========================================

@@ -1,0 +1,49 @@
+=========================================
+|                 AJUDA                 |
+=========================================
+
+[ NOTA DE SISTEMA ]
+Ao executar o programa, as estruturas de pastas necessárias
+('logs/', 'logs/generated_logs/' e 'reports/') são criadas
+automaticamente no diretório atual.
+
+1 - Carregar logs
+Carrega ficheiros de log para a memória. Procura tanto por logs 
+externos na pasta 'logs/' como simulados em 'logs/generated_logs/'. 
+Se o nome for deixado em branco, carrega automaticamente o log 
+mais recente encontrado no sistema.
+
+2 - Gerar logs
+Simulador de ameaças. Permite escolher o nome do log gerado.
+Se o nome for deixado em branco ou já existir, o log é guardado 
+de forma sequencial (ex: _1, _2) sem apagar os gerados anteriormente.
+
+3 - Autenticações falhadas
+Procura tentativas de login suspeitas.
+
+4 - Picos de atividade
+Identifica períodos com atividade anormal.
+
+5 - Beaconing
+Deteta comunicações periódicas.
+
+6 - DNS suspeito
+Procura domínios potencialmente gerados por algoritmos.
+
+7 - Análise de IPs externos
+Identifica comunicações para IPs públicos e a respetiva localização.
+
+8 - Executar análise completa
+Executa todas as verificações acima em simultâneo.
+
+9 - Ver alertas
+Mostra os alertas críticos encontrados na análise.
+
+10 - Estatísticas
+Apresenta métricas e estatísticas gerais dos logs.
+
+11 - Gerar relatório
+Cria um relatório avançado com anexo de evidências (IoCs) e 
+guarda-o na pasta 'reports/'. Permite escolher o nome do ficheiro, 
+guardando de forma sequencial (ex: _1) caso o nome já exista.
+=========================================
