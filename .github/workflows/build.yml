@@ -25,7 +25,7 @@ jobs:
 
     - name: Compilar Executável
       working-directory: ./src_pt
-      run: ocran botnet_detector.rb --icon botnet_ico.ico --output botnet_detector.exe
+      run: ocran botnet_detector.rb --icon botnet_ico.ico --output botnet_detector.exe docs/
 
     - name: Upload Artefacto EXE
       uses: actions/upload-artifact@v4
