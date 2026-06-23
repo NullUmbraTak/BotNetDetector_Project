@@ -854,6 +854,8 @@ def mostrar_menu
   print "Opção: "
 end
 
+exit if defined?(Ocran)
+
 loop do
   limpar_ecra
   mostrar_menu
